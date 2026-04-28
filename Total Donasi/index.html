@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Total Donasi - HexaCare</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/"><span>HC</span>HexaCare</a>
+      <nav>
+        <a href="/Tampilan-Event/">Event</a>
+        <a href="/Donasi/">Donasi</a>
+        <a href="/Total-Donasi/">Total Donasi</a>
+      </nav>
+      <div class="auth-actions">$auth_nav</div>
+    </header>
+    <main class="page">
+      <section class="dashboard-strip">
+        <div><span>Total Publik</span><strong>$public_total</strong></div>
+        <div><span>Donasi dari Web</span><strong>$donation_total</strong></div>
+        <div><span>Total Transaksi</span><strong>$transaction_count</strong></div>
+        <div><span>Event Aktif</span><strong>$event_count</strong></div>
+      </section>
+      <section class="section compact">
+        <div class="section-heading">
+          <p class="eyebrow">Total Donasi</p>
+          <h1>Transparansi transaksi</h1>
+        </div>
+        <div class="transaction-list">$transaction_list</div>
+      </section>
+    </main>
+  </body>
+</html>
+

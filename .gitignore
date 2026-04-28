@@ -1,0 +1,7 @@
+__pycache__/
+.runtime/
+*.pyc
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+database/.secret_key

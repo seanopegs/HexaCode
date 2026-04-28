@@ -1,0 +1,58 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HexaCare - Trusted Crowdfunding Platform</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/"><span>HC</span>HexaCare</a>
+      <nav>
+        <a href="/Tampilan-Event/">Event</a>
+        <a href="/Donasi/">Donasi</a>
+        <a href="/Total-Donasi/">Total Donasi</a>
+      </nav>
+      <div class="auth-actions">$auth_nav</div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Trusted Crowdfunding Platform</p>
+          <h1>Equal social aid distribution, transparan dari donatur sampai penerima.</h1>
+          <p>Platform crowdfunding sosial dengan registrasi, login, event bantuan, donasi, proses transaksi, dan laporan total donasi berbasis SQLite.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="/Tampilan-Event/">Lihat Event</a>
+            <a class="ghost-button" href="/Donasi/">Mulai Donasi</a>
+          </div>
+        </div>
+        <aside class="hero-stats">
+          <div><span>Total Terkumpul</span><strong>$public_total</strong></div>
+          <div><span>Donasi Baru</span><strong>$donation_total</strong></div>
+          <div><span>Event Aktif</span><strong>$event_count</strong></div>
+        </aside>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Tampilan Event</p>
+          <h2>Program bantuan terverifikasi</h2>
+        </div>
+        <div class="event-grid">$event_cards</div>
+      </section>
+
+      <section class="section muted-section">
+        <div class="section-heading">
+          <p class="eyebrow">Proses Transaksi</p>
+          <h2>Riwayat transaksi terbaru</h2>
+        </div>
+        <div class="transaction-list">$transaction_list</div>
+      </section>
+    </main>
+
+    <footer>HexaCare &copy; $year - data tersimpan di folder database.</footer>
+  </body>
+</html>
+

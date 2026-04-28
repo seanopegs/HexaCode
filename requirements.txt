@@ -1,0 +1,3 @@
+﻿# HexaCare memakai Python standard library saja.
+# Tidak ada dependency pip yang wajib di-install.
+

@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proses Transaksi - HexaCare</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/"><span>HC</span>HexaCare</a>
+      <nav>
+        <a href="/Tampilan-Event/">Event</a>
+        <a href="/Donasi/">Donasi</a>
+        <a href="/Total-Donasi/">Total Donasi</a>
+      </nav>
+      <div class="auth-actions">$auth_nav</div>
+    </header>
+    <main class="page">
+      <section class="receipt">
+        <p class="eyebrow">Proses Transaksi</p>
+        <h1>Transaksi berhasil diproses</h1>
+        <div class="receipt-grid">
+          <div><span>Referensi</span><strong>$reference</strong></div>
+          <div><span>Event</span><strong>$event_title</strong></div>
+          <div><span>Nominal</span><strong>$amount</strong></div>
+          <div><span>Status</span><strong>$status</strong></div>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-button" href="/Donasi/">Donasi Lagi</a>
+          <a class="ghost-button" href="/Total-Donasi/">Lihat Total Donasi</a>
+        </div>
+      </section>
+      <section class="section compact">
+        <div class="section-heading">
+          <p class="eyebrow">Riwayat</p>
+          <h2>Transaksi akun ini</h2>
+        </div>
+        <div class="transaction-list">$transaction_list</div>
+      </section>
+    </main>
+  </body>
+</html>
+

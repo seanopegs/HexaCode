@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donasi - HexaCare</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/"><span>HC</span>HexaCare</a>
+      <nav>
+        <a href="/Tampilan-Event/">Event</a>
+        <a href="/Donasi/">Donasi</a>
+        <a href="/Total-Donasi/">Total Donasi</a>
+      </nav>
+      <div class="auth-actions">$auth_nav</div>
+    </header>
+    <main class="donation-page">
+      <section class="donation-copy">
+        <p class="eyebrow">Donasi</p>
+        <h1>Buat transaksi donasi dengan alur yang jelas.</h1>
+        <p>Semua transaksi masuk ke tabel SQLite di folder database. Saat update website, cukup pertahankan folder database agar data tetap aman.</p>
+      </section>
+      <form class="donation-card" method="post" action="/Proses-Transaksi/">
+        $alert
+        $login_notice
+        <label>Nama Donatur<input name="donor_name" value="$donor_name" placeholder="Nama donatur" required $disabled></label>
+        <label>Event Bantuan<select name="event_id" required $disabled>$event_options</select></label>
+        <label>Nominal Donasi<input type="number" name="amount" min="10000" step="5000" value="50000" required $disabled></label>
+        <label>Metode Pembayaran
+          <select name="payment_method" required $disabled>
+            <option>Transfer Bank</option>
+            <option>Virtual Account</option>
+            <option>E-Wallet</option>
+            <option>QRIS</option>
+          </select>
+        </label>
+        <label>Catatan Opsional<textarea name="note" rows="4" placeholder="Contoh: semoga cepat tersalurkan" $disabled></textarea></label>
+        <button class="primary-button full-button" type="submit" $disabled>Buat Transaksi</button>
+        <p class="form-note">Belum login? <a href="/Login/">Masuk</a> atau <a href="/Registrasi/">registrasi</a> dulu.</p>
+      </form>
+    </main>
+  </body>
+</html>
+
