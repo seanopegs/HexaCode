@@ -1,1 +1,148 @@
-hello world
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EquaFund - Crowdfunding Sosial Terpercaya</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="EquaFund beranda">
+        <span class="brand-mark">EF</span>
+        <span>EquaFund</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigasi utama">
+        <a href="#events">Event</a>
+        <a href="#donate">Donasi</a>
+        <a href="#transactions">Transaksi</a>
+      </nav>
+      <div class="auth-actions" id="authActions">
+        <button class="ghost-button" type="button" data-open-auth="login">Masuk</button>
+        <button class="primary-button" type="button" data-open-auth="register">Daftar</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">Trusted Crowdfunding Platform</p>
+          <h1>Bantuan sosial yang merata, transparan, dan mudah dilacak.</h1>
+          <p class="hero-text">
+            EquaFund menghubungkan donatur dengan program bantuan yang terverifikasi, lengkap
+            dengan progress dana, tujuan distribusi, dan riwayat transaksi.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#events">Lihat Event</a>
+            <a class="ghost-button" href="#donate">Mulai Donasi</a>
+          </div>
+        </div>
+        <div class="hero-panel" aria-label="Ringkasan distribusi bantuan">
+          <div class="panel-stat">
+            <span>Total Dana</span>
+            <strong id="totalRaised">Rp0</strong>
+          </div>
+          <div class="panel-stat">
+            <span>Event Aktif</span>
+            <strong>4</strong>
+          </div>
+          <div class="impact-list">
+            <div>
+              <span class="dot dot-green"></span>
+              Dana pendidikan anak pesisir
+            </div>
+            <div>
+              <span class="dot dot-blue"></span>
+              Paket pangan keluarga rentan
+            </div>
+            <div>
+              <span class="dot dot-orange"></span>
+              Klinik keliling daerah terpencil
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-band" id="events">
+        <div class="section-heading">
+          <p class="eyebrow">Tampilan Event</p>
+          <h2>Pilih program bantuan terverifikasi</h2>
+        </div>
+        <div class="event-grid" id="eventGrid"></div>
+      </section>
+
+      <section class="donation-layout" id="donate">
+        <div class="donation-copy">
+          <p class="eyebrow">Donasi</p>
+          <h2>Transaksi donasi cepat dan jelas.</h2>
+          <p>
+            Pilih event, masukkan nominal, lalu konfirmasi transaksi. Setiap donasi tersimpan
+            di riwayat agar alur bantuannya mudah dipantau.
+          </p>
+          <div class="trust-strip">
+            <span>Verifikasi penerima</span>
+            <span>Laporan terbuka</span>
+            <span>Distribusi setara</span>
+          </div>
+        </div>
+
+        <form class="donation-form" id="donationForm">
+          <label>
+            Nama Donatur
+            <input id="donorName" type="text" placeholder="Contoh: Dinda" required />
+          </label>
+          <label>
+            Event Bantuan
+            <select id="eventSelect" required></select>
+          </label>
+          <label>
+            Nominal Donasi
+            <input id="donationAmount" type="number" min="10000" step="5000" value="50000" required />
+          </label>
+          <label>
+            Metode Pembayaran
+            <select id="paymentMethod" required>
+              <option value="Transfer Bank">Transfer Bank</option>
+              <option value="E-Wallet">E-Wallet</option>
+              <option value="Virtual Account">Virtual Account</option>
+            </select>
+          </label>
+          <button class="primary-button full-button" type="submit">Buat Transaksi</button>
+          <p class="form-note" id="donationMessage">Login dulu agar transaksi tercatat atas akunmu.</p>
+        </form>
+      </section>
+
+      <section class="section-band transactions" id="transactions">
+        <div class="section-heading">
+          <p class="eyebrow">Transaksi</p>
+          <h2>Riwayat transaksi donasi</h2>
+        </div>
+        <div class="transaction-list" id="transactionList"></div>
+      </section>
+    </main>
+
+    <dialog class="auth-dialog" id="authDialog">
+      <form class="auth-card" id="authForm" method="dialog">
+        <button class="close-button" type="button" id="closeAuth" aria-label="Tutup">x</button>
+        <p class="eyebrow" id="authEyebrow">Login</p>
+        <h2 id="authTitle">Masuk ke EquaFund</h2>
+        <label id="nameField">
+          Nama Lengkap
+          <input id="authName" type="text" placeholder="Nama kamu" />
+        </label>
+        <label>
+          Email
+          <input id="authEmail" type="email" placeholder="nama@email.com" required />
+        </label>
+        <label>
+          Password
+          <input id="authPassword" type="password" placeholder="Minimal 6 karakter" required />
+        </label>
+        <button class="primary-button full-button" type="submit" id="authSubmit">Masuk</button>
+        <p class="form-note" id="authMessage"></p>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
