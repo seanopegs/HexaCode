@@ -1,6 +1,15 @@
 ﻿# HexaCare
 
-Trusted Crowdfunding Platform for Equal Social Aid Distribution.
+Prototipe website crowdfunding bantuan sosial menggunakan Python dan SQLite.
+
+## Status dan batasan
+
+Proyek ini menyediakan registrasi, login, daftar event, pencatatan donasi,
+receipt, dan laporan total donasi. Transaksi dari form langsung dicatat sebagai
+`SUCCESS` di database; belum ada integrasi payment gateway atau verifikasi
+transfer. Status tersebut menunjukkan catatan aplikasi, bukan bukti pembayaran.
+Data event dan jumlah awal donasi disediakan sebagai data demo. Proyek ini
+belum membuktikan penyaluran bantuan atau pemerataan distribusinya.
 
 ## Struktur
 
